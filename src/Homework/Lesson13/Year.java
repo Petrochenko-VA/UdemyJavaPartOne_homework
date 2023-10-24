@@ -24,6 +24,8 @@ class Month{
             case 2:
                 System.out.println("В этом месяце 28 дней и это февраль ;)");
                 break;
+            default:
+                System.out.println("Месяца с таким порядковым номером не существует");
         }
     }
 
