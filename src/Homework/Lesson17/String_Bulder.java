@@ -24,7 +24,7 @@ public class String_Bulder {
     }
 
     public static void main(String[] args) {
-        StringBuilder sb1 = new StringBuilder("priveT");
+        StringBuilder sb1 = new StringBuilder("privet");
         StringBuilder sb2 = new StringBuilder("privet");
         System.out.println( ravenstvo(sb1,sb2));
 
