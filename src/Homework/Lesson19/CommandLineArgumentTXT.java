@@ -1,5 +1,7 @@
+package Homework.Lesson19;
+
 public class CommandLineArgumentTXT {
-    public static String[] abc(String[]... array) {
+    public static String[] abc(String[] array) {
 
         //всем элементам переданным в command line присвоить значение null
         for (int i = 0; i < array.length; i++) {
