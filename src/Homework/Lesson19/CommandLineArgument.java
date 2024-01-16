@@ -1,7 +1,7 @@
 package Homework.Lesson19;
 
 public class CommandLineArgument {
-    public static String[] abc(String[]... array) {
+    public static void abc(String[]... array) {
 
         //всем элементам переданным в command line присвоить значение null
         for (int i = 0; i < array.length; i++) {
@@ -9,12 +9,12 @@ public class CommandLineArgument {
         }
 
         // вывести на экран значения обновленного массива
-        for (String a : array) {
+        for (String [] a : array) {
             System.out.println(a);
         }
 
 
-        return array;
+        return ;
     }
 
     public static void main(String[] args) {
