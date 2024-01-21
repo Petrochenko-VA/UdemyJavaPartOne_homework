@@ -2,11 +2,11 @@ package Homework.Lesson22;
 
 public class Animal {
 
-    public Animal(){
+     Animal(){
         System.out.println("I am animal!");
     }
 
-    public int eyes;
+     int eyes;
     public void eat(){
         System.out.println("Animal eat.");
     }
