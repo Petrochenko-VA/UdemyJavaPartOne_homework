@@ -7,7 +7,7 @@ public class Student {
 
     //конструктор
 
-//    public Student(StringBuilder name, int course, int grade){
+//    Student(StringBuilder name, int course, int grade){
 //        this.name = new StringBuilder(name);
 //        this.course=course;
 //        this.grade=grade;
