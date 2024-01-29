@@ -1,27 +1,103 @@
 package Homework.Lesson24;
 
+import Homework.Lesson10.p1.A;
+
 public class Lesson24 {
     public static void main(String[] args) {
-        Mechenosec mechenosec = new Mechenosec("Mechenos");
-        System.out.println(mechenosec.name);
-        mechenosec.swim();
-        mechenosec.eat();
-        mechenosec.sleep();
+        Speakable s1 = new Bird("Ptitca") {
+            @Override
+            void fly() {
+            }
 
-        Speakable speakable = new Pingvin("Pingvin_Speakable");
-        speakable.speak();
+            @Override
+            void eat() {
+            }
 
-        Animal animal = new Lev("Lev_Animal");
-        System.out.println(animal.name);
-        animal.eat();
-        animal.sleep();
+            @Override
+            void sleep() {
+            }
+        };
+        Speakable s2 = new Pingvin("Ping");
+        Speakable s3 = new Mammal("mammal") {
+            @Override
+            void run() {
+            }
 
-        Mammal mammal = new Lev("Lev_mammal");
-        System.out.println(mammal.name);
-        mammal.run();
-        mammal.speak();
-        mammal.eat();
-        mammal.sleep();
+            @Override
+            void eat() {
+            }
+
+            @Override
+            void sleep() {
+            }
+        };
+
+        Animal a1 = new Bird("bird1") {
+            @Override
+            void fly() {
+
+            }
+
+            @Override
+            void eat() {
+
+            }
+
+            @Override
+            void sleep() {
+
+            }
+        };
+        Animal a2 = new Lev("Leo");
+        Animal a3 = new Mammal("mam2") {
+            @Override
+            void run() {
+
+            }
+
+            @Override
+            void eat() {
+
+            }
+
+            @Override
+            void sleep() {
+
+            }
+        };
+        Animal a4 = new Pingvin("ping");
+        Animal a5 = new Fish("Fish") {
+            @Override
+            void swim() {
+
+            }
+
+            @Override
+            void eat() {
+
+            }
+        };
+        Animal a6 = new Mechenosec("Metch");
+
+
+        Speakable[] speakables = {s1, s2, s3};
+        Animal[] animals = {a1,a2,a3,a4,a5,a6};
+
+        for(Speakable s:speakables){
+            if(s instanceof Speakable){
+                s.speak();
+
+            }
+        }
+        for(Animal a:animals){
+            if(a instanceof Animal){
+                System.out.println(a.name);
+                a.sleep();
+                a.eat();
+
+            }
+        }
+
 
     }
 }
