@@ -1,102 +1,71 @@
 package Homework.Lesson25;
 
 
+import Homework.Lesson14.Lesson;
+
 public class Lesson25 {
     public static void main(String[] args) {
-        Speakable s1 = new Bird("Ptitca") {
-            @Override
-            void fly() {
-            }
+        Animal a1 = new Lev("Leo");
+        Animal a2 = new Pingvin("ping");
+        Animal a3 = new Mechenosec("Metch");
+        Fish f1 = new Mechenosec("metch");
+        Bird b1 = new Pingvin("bird");
+        Mammal m1 = new Lev("Lef");
+        Mechenosec mech1 = new Mechenosec("mech");
+        Pingvin p1 = new Pingvin("poingg");
+        Lev l1 = new Lev("leo");
 
-            @Override
-            void eat() {
-            }
-
-            @Override
-            void sleep() {
-            }
-        };
         Speakable s2 = new Pingvin("Ping");
-        Speakable s3 = new Mammal("mammal") {
-            @Override
-            void run() {
+        Speakable s1 = new Lev("LEF");
+
+
+        Speakable[] speakables = {s1, s2, b1, m1, p1, l1};
+        Animal[] animals = {a1, a2, a2, f1, b1, m1, mech1, p1, l1};
+
+        for (Animal a : animals) {
+            if (a instanceof Mechenosec) {
+                Mechenosec m = (Mechenosec) a;
+                System.out.println(m.name);
+                m.eat();
+                m.sleep();
+                m.swim();
+            } else if (a instanceof Pingvin) {
+                Pingvin p = (Pingvin) a;
+                System.out.println(p.name);
+                p.eat();
+                p.sleep();
+                p.speak();
+                p.fly();
+            } else if (a instanceof Lev) {
+                Lev l = (Lev) a;
+                System.out.println(l.name);
+                l.eat();
+                l.run();
+                l.sleep();
+                l.speak();
             }
+            System.out.println("--------------------");
+        }
 
-            @Override
-            void eat() {
-            }
+        for (Speakable s : speakables) {
+            if (s instanceof Pingvin) {
+                Pingvin p = (Pingvin) s;
+                System.out.println(p.name);
+                p.fly();
+                p.speak();
+                p.eat();
+                p.sleep();
 
-            @Override
-            void sleep() {
-            }
-        };
-
-        Animal a1 = new Bird("bird1") {
-            @Override
-            void fly() {
-
-            }
-
-            @Override
-            void eat() {
-
-            }
-
-            @Override
-            void sleep() {
-
-            }
-        };
-        Animal a2 = new Lev("Leo");
-        Animal a3 = new Mammal("mam2") {
-            @Override
-            void run() {
-
-            }
-
-            @Override
-            void eat() {
-
-            }
-
-            @Override
-            void sleep() {
-
-            }
-        };
-        Animal a4 = new Pingvin("ping");
-        Animal a5 = new Fish("Fish") {
-            @Override
-            void swim() {
-
-            }
-
-            @Override
-            void eat() {
-
-            }
-        };
-        Animal a6 = new Mechenosec("Metch");
-
-
-        Speakable[] speakables = {s1, s2, s3};
-        Animal[] animals = {a1,a2,a3,a4,a5,a6};
-
-        for(Speakable s:speakables){
-            if(s instanceof Speakable){
-                s.speak();
+            } else if (s instanceof Lev) {
+                Lev l = (Lev) s;
+                System.out.println(l.name);
+                l.speak();
+                l.eat();
+                l.run();
+                l.sleep();
 
             }
         }
-        for(Animal a:animals){
-            if(a instanceof Animal){
-                System.out.println(a.name);
-                a.sleep();
-                a.eat();
-
-            }
-        }
-
 
     }
 }
