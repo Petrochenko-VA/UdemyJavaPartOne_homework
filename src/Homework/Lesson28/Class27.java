@@ -12,15 +12,18 @@ public class Class27 {
             try {
                 tiger.drink("pivo");
             } catch (NeVodaException e) {
-                System.out.println(e);
+                System.out.println(e.getMessage());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
 
-            }
-            finally {
+            } finally {
                 System.out.println("Ento inner finaly block");
             }
-        } catch (Exception e) {
+        } catch (RuntimeException e) {
             System.out.println(e);
 
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 }
