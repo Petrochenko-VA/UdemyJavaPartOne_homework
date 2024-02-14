@@ -10,12 +10,12 @@ import java.time.temporal.ChronoUnit;
 public class Date {
 
      static DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("YYYY, LLLL-dd !! HH:mm");
-     static DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("HH:mm, d/LLL/y");
+     static DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("HH:mm, dd/LLL/yy");
 
      void smena (LocalDateTime ldt1, LocalDateTime ldt2, Period p, Duration d){
 
 
-          if(ldt1.isBefore(ldt2)){
+          while(ldt1.isBefore(ldt2)){
                System.out.println("Pabotaem c " + ldt1.format(formatter1));
                ldt1 = ldt1.plus(p);
                System.out.println("do " + ldt1.format(formatter1));
@@ -29,10 +29,10 @@ public class Date {
 
      public static void main(String[] args) {
           Date d = new Date();
-          LocalDateTime ldt1 = LocalDateTime.of(2023,02,14,9,00);
-          LocalDateTime ldt2 = LocalDateTime.of(2026,02,14,13,00);
-          Period p = Period.ofDays(1);
-          Duration dur = Duration.of(1, ChronoUnit.HOURS);
+          LocalDateTime ldt1 = LocalDateTime.of(2023,01,1,9,00);
+          LocalDateTime ldt2 = LocalDateTime.of(2026,12,31,18,00);
+          Period p = Period.of(0,1,2);
+          Duration dur = Duration.ofMinutes(600);
 
           d.smena(ldt1,ldt2,p,dur);
      }
